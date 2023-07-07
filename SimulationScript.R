@@ -129,9 +129,9 @@ simulationSettings <- list(
 )
 
 analysisSettings <- SimulationEvaluationHte::createAnalysisSettings(
-  threads = 4, # define number of threads for simulations (1 run per thread)
+  threads = 1, # define number of threads for simulations (1 run per thread)
   seed = 19910930,
-  replications = 8,
+  replications = 500,
   validationSize = 5e5,
   analysisId = paste(
     "scenario",
@@ -203,4 +203,3 @@ res <- SimulationEvaluationHte::runAnalysis(
   predictionSettings = predictionSettings,
   smoothSettings = smoothSettings
 )
-# install.packages("tidyverse")
